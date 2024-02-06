@@ -1,18 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Homeworks | SEP303</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='script.js'></script>
+    <title>Homeworks | SEP303</title>
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-  <script>
-$("#loadContent").load("https://48059.site.bot-hosting.net/homeworks/index.html");
-</script>
-  <div id="loadContent">
-    
-  </div>
-</body>
+    <h1>Homeworks List</h1>
+  <div class="hw-list">
+    <div class="sortby"
+    <label for="sortByTeacher">Sort by Teacher:</label>
+    <select id="sortByTeacher" onchange="fetchHomeworks()">
+        <option value="default">Default</option>
+        <option value="apilya">ครูอภิญญา</option>
+        <option value="jriya">ครูจริยา</option>
+        <option value="thananya">ครูธนัญญาภัค</option>
+        <option value="suthasini">ครูสุธาสินี</option>
+        <option value="rujirek">ครูรุจิเรข</option>
+        <option value="sila">ครูศิลาลักษ์</option>
+        <option value="pani">ครูพาณี</option>
+        <option value="prapin">ครูประพิณ</option>
+        <option value="john">ครูJohn</option>
+        <option value="wimalai">ครูวิมาลัย</option>
+        <option value="apisit">ครูอภิสิทธิ์</option>
+        <option value="tosapon">ครูทศพล</option>
+        <option value="samruay">ครูสำรวย</option>
+        <option value="thayanan">ครูธัญญานันต์</option>
+        <option value="sudarat">ครูสุดารัตน์</option>
+        <option value="tirasak">ครูธีรศักดิ์</option>
+        <option value="mayura">ครูมยุรา</option>
+   </select>
 
+    <label for="sortBySubject">Sort by Subject:</label>
+    <select id="sortBySubject" onchange="fetchHomeworks()">
+        <option value="default">Default</option>
+      <option value="math">ประเภท คณิตศาสตร์</option>
+      <option value="science">ประเภท วิทยาศาสตร์</option>
+      <option value="thai">ประเภท ภาษาไทย</option>
+      <option value="english">ประเภท ภาษาอังกฤษ</option>
+      <option value="career">ประเภท การงานอาชีพ</option>
+      <option value="PE">ประเภท พละศึกษา</option>
+      <option value="sci-calcu">ประเภท คอมพิวเตอร์การคำนวณ</option>
+      <option value="society">ประเภท สังคมศึกษา</option>
+      <option value="guide">ประเภท แนะแนว</option>
+      <option value="health">ประเภท สุขศึกษา</option>
+      <option value="history">ประเภท ประวัติศาสตร์</option>
+      <option value="art">ประเภท ศิลปะ</option>
+   </select>
+    </div>
+    <div class="hwDisplay">
+    <ul id="homeworkList"></ul>
+  </div>
+    <script src="script.js"></script>
+</body>
 </html>
