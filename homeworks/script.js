@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sortByTeacher = document.getElementById('sortByTeacher').value;
     const sortBySubject = document.getElementById('sortBySubject').value;
 
-    fetch(`/GetHomeworks?sortByTeacher=${sortByTeacher}&sortBySubject=${sortBySubject}`)
+    fetch(`http://48059.site.bot-hosting.net/GetHomeworks?sortByTeacher=${sortByTeacher}&sortBySubject=${sortBySubject}`)
       .then(response => response.json())
       .then(homeworks => updateHomeworkList(homeworks))
       .catch(error => console.error('Error fetching homeworks:', error.message));
@@ -47,7 +47,7 @@ function fetchHomeworks() {
   const sortByTeacher = document.getElementById('sortByTeacher').value;
   const sortBySubject = document.getElementById('sortBySubject').value;
 
-  fetch(`https://48059.site.bot-hosting.net/GetHomeworks?sortByTeacher=${sortByTeacher}&sortBySubject=${sortBySubject}`)
+  fetch(`http://48059.site.bot-hosting.net/GetHomeworks?sortByTeacher=${sortByTeacher}&sortBySubject=${sortBySubject}`)
     .then(response => response.json())
     .then(homeworks => updateHomeworkList(homeworks))
     .catch(error => console.error('Error fetching homeworks:', error.message));
